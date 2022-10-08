@@ -3,18 +3,17 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
 import MyComponent from './components/MyComponent';
-import React from 'react';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-      hello world with baothi &amp; hoc reactjs 1111112222
+
+function App() {
+  return (
+    <div>
+      hello world with baothi &amp; hoc reactjs
       <MyComponent />
     </div>
-    )
-  }
+  );
 }
+
 
 // function App() {
 //   const count = useSelector(state => state.counter.count);
