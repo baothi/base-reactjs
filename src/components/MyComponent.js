@@ -1,31 +1,30 @@
 import React from "react";
+import DisplayInfor from "./DisplayInfo";
+import UserInfor from "./UserInfor";
 
 class MyComponent extends React.Component {
     state = {
-        name: "John",
-        age: 30,
-        address: 'học react js từ đầu'
-    };
-    handleClick = (event) => {
-        console.log("random", Math.floor(Math.random() * 100) +1);
-        this.setState({
-            name: "bao hoc",
-            age: Math.floor(Math.random() * 100) +1
-        });
-        // this.setState({age: Math.floor(Math.random() * 100) +1});
-    };
-
-    handleOnMoverOver(event){
-        // console.log(event.pageX +' + '+ event.pageY);
+        listUsers: [
+            { id: 1, name: "John Doe", age: 30 },
+            { id: 2, name: "learn Doe", age: 31 },
+            { id: 3, name: "react js Doe", age: 32 }
+        ]
     }
-
+    
     // JSX
     render() {
+        // const myInfor = ['abc', 'def', 'ghi']
+        // DRY : don't repeat yourself
         return(
-            <div>
-                My name is {this.state.name} <br /> I am from {this.state.address} and {this.state.age} <br /> <br />
-                <button onClick={(event) => {this.handleClick(event)}}>click me</button><br /> <br />
-                <button onMouseOver={this.handleOnMoverOver}>Hover me</button>
+            <div>    
+                <br />
+                <UserInfor />
+                <br />
+                <br />
+                <DisplayInfor 
+                  listUsers = {this.state.listUsers}
+                />
+                {/* <DisplayInfor name={"My name is Học lập trình reactjs"} age={30} myInfor={myInfor} /> */}
             </div>
         );
     }
