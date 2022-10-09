@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DisplayInfor from "./DisplayInfo";
 import AddUserInfor from "./AddUserInfor";
 
@@ -87,7 +87,15 @@ const MyComponent = (props) => {
         setListUsers(ListUsersClone);
         // this.setState({ listUsers: ListUsersClone });
     };
-    
+    useEffect(
+        () => {
+            //setTimeout(() => {document.title = "Học React js"},3000);
+            if(listUsers.length === 0) {
+                alert("ListUsers is empty");
+            }
+            console.log(">>>>> call me useEffect");
+        },[listUsers]
+    );
 
     return(
             <>
