@@ -70,3 +70,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 npm install --save-exact sass@1.53.0
 npm install --save-exact react-router@6.3.0 bootstrap@5.2.0 react-bootstrap@2.5.0
+npm install react-router-dom@6.3.0
